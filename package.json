@@ -1,0 +1,19 @@
+{
+  "name": "simplepos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jobdecrypt/simplePOS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jobdecrypt/simplePOS/issues"
+  },
+  "homepage": "https://github.com/jobdecrypt/simplePOS#readme"
+}

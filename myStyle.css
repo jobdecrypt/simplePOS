@@ -1,0 +1,15 @@
+.posBox {
+  background-color: rgb(23, 117, 117);
+  color: white;
+  margin: 2em;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.receiptBox {
+  background-color: rgb(111, 134, 134);
+  color: white;
+  margin: 2em;
+  padding: 1em;
+  border-radius: 10px;
+}
