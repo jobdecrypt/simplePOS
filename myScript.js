@@ -1,6 +1,5 @@
 // i added a comma on the array bellow so that it will start on itemArray[1]
 var itemArray = [,];
-var newArray = [];
 
 let buttonCount = 0;
 let keyValue = new Object();
@@ -14,31 +13,38 @@ function showButton() {
   let getName = document.getElementById("posName").value;
   // this will get the value inside the Price input's value
   let getPrice = document.getElementById("posPrice").value;
-  //this will name the button with the price
 
   if (getButton.style.display === "none") {
     //   this will show all the hidden button
     getButton.style.display = "block";
     getButton.innerText = getName;
-    getButton.name = getPrice;
+    getButton.name = getName;
+    getButton.value = getPrice;
   } else {
     getButton.style.display === "none";
   }
 
-  // Callback function
-  printToReceipt();
+  // Callback function to print to Item Values
+  printItemValues();
 
-  //   //   keyValue test
-
+  // below is just a keyValue test
   //   keyValue.name = getName;
   //   keyValue.price = getPrice;
   //   itemArray.push(keyValue);
 
-  //   clear Values
-  setTimeout(() => $("#form1").find("input").val("")), 3;
+  //   below is to clear Values using jQuery
+  // setTimeout(() => $("#form1").find("input").val("")), 3;
 }
 
-function printToReceipt() {
+function buttonAction() {
+  // let x = document.getElementById(param);
+  // console.log(x.name);
+  // console.log(JSON.stringify(id));
+  let y = document.getElementsByTagName();
+  console.log(y);
+}
+
+function printItemValues() {
   // Get Name Value
   let getName = document.getElementById("posName").value;
   let nameString = document.createTextNode(getName);
@@ -48,9 +54,7 @@ function printToReceipt() {
 
   let addList = document.createElement("li");
 
-  let dollarSign = document.createTextNode(
-    " ...............................   $"
-  );
+  let dollarSign = document.createTextNode(" =   $");
 
   addList.appendChild(nameString);
   addList.appendChild(dollarSign);
@@ -66,16 +70,11 @@ function printToReceipt() {
   document.getElementById("inputs").appendChild(addList);
 }
 
-function buttonAction() {
-  let x = document.getElementById("but2");
-  x.name.value;
-
-  //   for (i = 1; i <= 12; i++) {
-  //     let x = document.getElementById("but" + i);
-  //     x.name.value;
-  //     console.log(x);
-  //   }
-}
+//   for (i = 1; i <= 12; i++) {
+//     let x = document.getElementById("but" + i);
+//     x.name.value;
+//     console.log(x);
+//   }
 
 // below is a function to generate some buttons
 // function generateButton() {
