@@ -1,8 +1,14 @@
-var newArray = [];
+// var newArray = [];
 
-const resultsList = document.getElementById("data");
+// const resultsList = document.getElementById("data");
 
-new URLSearchParams(window.location.search).forEach((value, name) => {
-  resultsList.append(`${name}: ${value}`);
-  resultsList.append(document.createElement("br"));
-});
+// new URLSearchParams(window.location.search).forEach((value, name) => {
+//   resultsList.append(`${name}: ${value}`);
+//   resultsList.append(document.createElement("br"));
+// });
+
+// const load = () => {
+//   console.log("hello");
+// };
+
+// window.onload = load;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple POS</title>
+    <title>Job's Simple POS</title>
     <link
       rel="stylesheet"
       href="./assets/node_modules/bootstrap/dist/css/bootstrap.css"
@@ -18,7 +18,7 @@
     <!-- Navigation Bar  -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Simple POS</a>
+        <a class="navbar-brand" href="https://jobdecrypt.github.io">Job's Simple POS</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -33,11 +33,11 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="https://jobdecrypt.github.io">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="./data.html">Input Data</a>
+            </li> -->
             <!-- <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
@@ -94,17 +94,17 @@
 
                 <!-- POS box  -->
                 
-                <div class="col-md-6">
+                <div class="col-md-6 mb-3">
                     
 
                         <!-- Input Area  -->
                         <!-- bottom code will be for the future to send data to another html page -->
-                       <!-- <form id="form1" action="./data.html" target="_blank" method="GET"> -->
-                        <div class="input-group mb-3">
+                       <!-- <form id="form" action="./data.html" method="GET"> -->
+                        <div class="input-group mb-4">
                             <span class="input-group-text">Name</span>
-                            <input id="posName" name="itemInput" type="text" class="form-control" placeholder="Ex: Coffee" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <input id="posName" name="itemInput" type="text" class="form-control" placeholder="Ex: Coffee" aria-label="Recipient's username" aria-describedby="button-addon2" onfocus="this.value=''">
                             <span class="input-group-text">Price</span>
-                            <input id="posPrice" name="priceInput" type="number" class="form-control" placeholder="$0.00">
+                            <input id="posPrice" name="priceInput" type="number" class="form-control" placeholder="$0.00" onfocus="this.value=''">
                             <button onclick="showButton()" class="btn btn-outline-secondary" id="button-addon2">Add Item</button>
                         
                           <!-- This next line is a button to generate buttons  -->
@@ -117,46 +117,81 @@
 
                   <!-- Button's Area  -->
                   
-                  <div class="container">
+                  <div class="container mb-3">
                     
                     <div id="butRows" class="row">
                       <!-- This is the Regular 12 buttons  -->
                       <div class="col-4 mt-2">
-                        <button onclick="buttonAction()"id="but1" style="display: none" class="btn btn-outline-secondary">
-                        </button>
+                        <button onclick="buttonAction(1)" id="but1" style="display: none" class="btn btn-outline-secondary"></button>
                         </div>
                       <div class="col-4 mt-2">
-                        <button onclick="buttonAction()" id="but2" style="display: none" class="btn btn-outline-secondary"></button>
+                        <button onclick="buttonAction(2)" id="but2" style="display: none" class="btn btn-outline-secondary"></button>
                       </div>
                       <div class="col-4 mt-2">
-                        <button onclick="buttonAction()" id="but3" style="display: none" class="btn btn-outline-secondary"></button>
+                        <button onclick="buttonAction(3)" id="but3" style="display: none" class="btn btn-outline-secondary"></button>
                       </div>
                       <div class="col-4 mt-2">
-                        <button onclick="buttonAction()" id="but4" style="display: none" class="btn btn-outline-secondary"></button>
+                        <button onclick="buttonAction(4)" id="but4" style="display: none" class="btn btn-outline-secondary"></button>
                         </div>
                       <div class="col-4 mt-2">
-                        <button onclick="buttonAction()" id="but5" style="display: none" class="btn btn-outline-secondary"></button>
+                        <button onclick="buttonAction(5)" id="but5" style="display: none" class="btn btn-outline-secondary"></button>
                       </div>
                       <div class="col-4 mt-2">
-                        <button onclick="buttonAction()" id="but6" style="display: none" class="btn btn-outline-secondary"></button>
+                        <button onclick="buttonAction(6)" id="but6" style="display: none" class="btn btn-outline-secondary"></button>
                       </div>
                       <div class="col-4 mt-2">
-                        <button onclick="buttonAction()" id="but7" style="display: none" class="btn btn-outline-secondary"></button>
+                        <button onclick="buttonAction(7)" id="but7" style="display: none" class="btn btn-outline-secondary"></button>
                         </div>
                       <div class="col-4 mt-2">
-                        <button onclick="buttonAction()" id="but8" style="display: none" class="btn btn-outline-secondary"></button>
+                        <button onclick="buttonAction(8)" id="but8" style="display: none" class="btn btn-outline-secondary"></button>
                       </div>
                       <div class="col-4 mt-2">
-                        <button onclick="buttonAction()" id="but9" style="display: none" class="btn btn-outline-secondary"></button>
+                        <button onclick="buttonAction(9)" id="but9" style="display: none" class="btn btn-outline-secondary"></button>
                       </div>
                       <div class="col-4 mt-2">
-                        <button onclick="buttonAction()" id="but10" style="display: none" class="btn btn-outline-secondary"></button>
+                        <button onclick="buttonAction(10)" id="but10" style="display: none" class="btn btn-outline-secondary"></button>
                         </div>
                       <div class="col-4 mt-2">
-                        <button onclick="buttonAction()" id="but11" style="display: none" class="btn btn-outline-secondary"></button>
+                        <button onclick="buttonAction(11)" id="but11" style="display: none" class="btn btn-outline-secondary"></button>
                       </div>
                       <div class="col-4 mt-2">
-                        <button onclick="buttonAction()" id="but12" style="display: none" class="btn btn-outline-secondary"></button>
+                        <button onclick="buttonAction(12)" id="but12" style="display: none" class="btn btn-outline-secondary"></button>
+                      </div>
+                      <div class="col-4 mt-2">
+                        <button onclick="buttonAction(13)" id="but13" style="display: none" class="btn btn-outline-secondary"></button>
+                      </div>
+                      <div class="col-4 mt-2">
+                        <button onclick="buttonAction(14)" id="but14" style="display: none" class="btn btn-outline-secondary"></button>
+                      </div>
+                      <div class="col-4 mt-2">
+                        <button onclick="buttonAction(15)" id="but15" style="display: none" class="btn btn-outline-secondary"></button>
+                      </div>
+                      <div class="col-4 mt-2">
+                        <button onclick="buttonAction(16)" id="but16" style="display: none" class="btn btn-outline-secondary"></button>
+                      </div>
+                      <div class="col-4 mt-2">
+                        <button onclick="buttonAction(17)" id="but17" style="display: none" class="btn btn-outline-secondary"></button>
+                      </div>
+                      <div class="col-4 mt-2">
+                        <button onclick="buttonAction(18)" id="but18" style="display: none" class="btn btn-outline-secondary"></button>
+                      </div>
+                      <div class="col-4 mt-2">
+                        <button onclick="buttonAction(19)" id="but19" style="display: none" class="btn btn-outline-secondary"></button>
+                      </div>
+                      <div class="col-4 mt-2">
+                        <button onclick="buttonAction(20)" id="but20" style="display: none" class="btn btn-outline-secondary"></button>
+                      </div>
+                      <div class="col-4 mt-2">
+                        <button onclick="buttonAction(21)" id="but21" style="display: none" class="btn btn-outline-secondary"></button>
+                      </div>
+                      <div class="col-4 mt-2">
+                        <button onclick="buttonAction(22)" id="but22" style="display: none" class="btn btn-outline-secondary"></button>
+                      </div>
+                      <div class="col-4 mt-2">
+                        <button onclick="buttonAction(23)" id="but23" style="display: none" class="btn btn-outline-secondary"></button>
+                      </div>
+                      <div class="col-4 mt-2">
+                        <button onclick="buttonAction(24)" id="but24" style="display: none" class="btn btn-outline-secondary"></button>
                       </div>
 
                     </div>
@@ -164,33 +199,44 @@
                 </div>
                    
                 <!-- RECEIPT box  -->
-                <div class="col-md-6">
-                  <div style="text-align: center;">                               
-                        <h4>Invoice</h4>
+                <div class="col-md-6 mb-3">
+                  <div style="position: relative; bottom: 0; text-align: center;">                               
+                        <p><h3>Invoice</h3></p>
                       </div>  
-                        <ul style="list-style-type:none;" id="receipt">                        
+                        <ul id="receipt" style="list-style-type:none; text-align: center;">                        
                     </ul>
-                                                  
+
+                    <div id="Sum">
+                    <p><h5>Total</h5></p>
+                  </div>       
+                                   
               </div>
 
-              <!-- Item prices  -->
-              <div style="position: absolute; bottom: 0;" class="col-md-6 ">                                
-                <h6>Item Values</h6>
-                <ul id="inputs" style="list-style-type:none;" >                        
-            </ul>                                 
-      </div>
+              
             </div>
           </div>
         </div>
+    </section>
+
+    <section>
+      <div style="position:relative; bottom: 0;" class="container mt-4 bg-dark text-light">
+      <!-- Item Values -->
+      <div class="row">                                
+        <div style="text-align: center"><h6>Input Values</h6></div>
+        <ul id="inputs" style="list-style-type:none;" >                        
+    </ul>                                 
+</div>
+</div>
     </section>
             
             
 </header>
 
-    <!-- JS Scripts -->
-    <script src="./assets/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- this is Job Villanca's script  -->
     <script src="./myScript.js"></script>
-    <!-- dataScript  -->
     <script src="./dataScript.js"></script>
+    <!-- BootStrap JS Scripts -->
+    <script src="./assets/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
   </body>
 </html>

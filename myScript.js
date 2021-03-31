@@ -1,6 +1,12 @@
-// i added a comma on the array bellow so that it will start on itemArray[1]
-var itemArray = [,];
+//This is Job Villanca's original javascript code
+//feel free to change the JS code whatever you want
+//check my github page on https://jobdecrypt.github.io
+//check my github account on https://github.com/jobvillanca
 
+// i added a comma on the array bellow so that it will start on itemArray[1]
+let itemArray = [,];
+//array of pushed price values after clicking the button
+let pushedPrice = [];
 let buttonCount = 0;
 let keyValue = new Object();
 
@@ -14,37 +20,81 @@ function showButton() {
   // this will get the value inside the Price input's value
   let getPrice = document.getElementById("posPrice").value;
 
+  getButton.name = getName;
+  getButton.value = getPrice;
+
   if (getButton.style.display === "none") {
     //   this will show all the hidden button
     getButton.style.display = "block";
     getButton.innerText = getName;
-    getButton.name = getName;
-    getButton.value = getPrice;
   } else {
     getButton.style.display === "none";
   }
 
+  //this will create an object for the name and price values
+  let userInputs = {
+    name: getButton.name,
+    price: getButton.value,
+  };
+  //this will push the objects to the array or (the server if there is)
+  itemArray.push(userInputs);
+
   // Callback function to print to Item Values
-  printItemValues();
-
-  // below is just a keyValue test
-  //   keyValue.name = getName;
-  //   keyValue.price = getPrice;
-  //   itemArray.push(keyValue);
-
-  //   below is to clear Values using jQuery
-  // setTimeout(() => $("#form1").find("input").val("")), 3;
+  printInputValues();
 }
 
-function buttonAction() {
-  // let x = document.getElementById(param);
-  // console.log(x.name);
-  // console.log(JSON.stringify(id));
-  let y = document.getElementsByTagName();
-  console.log(y);
+// BUTTON ACTION part
+
+function buttonAction(number) {
+  // this will create a text node from the object from the item array's name
+  let invoiceName = document.createTextNode(itemArray[number].name);
+  // this will create a text node from the object from the item array's price
+  let invoicePrice = document.createTextNode(itemArray[number].price);
+  //this will get the content of the invoicePrice but not in Strings
+  let priceValue = invoicePrice.textContent;
+  //this will create a dotted line and the dollar sign
+  let dollarSign = document.createTextNode(
+    "...................................... $"
+  );
+
+  let addZeros = document.createTextNode(".00");
+
+  let addToList = document.createElement("li");
+
+  addToList.appendChild(invoiceName);
+  addToList.appendChild(dollarSign);
+  addToList.appendChild(invoicePrice);
+  // addToList.appendChild(addZeros);
+
+  //addToList.appendChild(addZeros);
+  // Add this next line if you want to add zero's if the value is int and not boolean
+
+  if (priceValue % 1 == 0) {
+    addToList.appendChild(addZeros);
+  }
+
+  document.getElementById("receipt").appendChild(addToList);
+  // console.log(invoicePrice.textContent);
+
+  pushedPrice.push(priceValue);
+
+  console.log(pushedPrice);
+  // to get the sum of the price values when button is clicked
+  // getSum();
 }
 
-function printItemValues() {
+// function getSum() {
+//   let len = pushedPrice.length;
+//   let sum = 0;
+//   for (i = 0; i < len; i++) {
+//     sum += pushedPrice[i];
+//   }
+//   console.log(sum);
+// }
+
+// INPUT VALUES part
+
+function printInputValues() {
   // Get Name Value
   let getName = document.getElementById("posName").value;
   let nameString = document.createTextNode(getName);
@@ -54,7 +104,7 @@ function printItemValues() {
 
   let addList = document.createElement("li");
 
-  let dollarSign = document.createTextNode(" =   $");
+  let dollarSign = document.createTextNode("  =   $");
 
   addList.appendChild(nameString);
   addList.appendChild(dollarSign);
@@ -64,7 +114,6 @@ function printItemValues() {
   let addZeros = document.createTextNode(".00");
   if (getPrice % 1 == 0) {
     addList.appendChild(addZeros);
-  } else {
   }
 
   document.getElementById("inputs").appendChild(addList);
